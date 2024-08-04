@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sperm Analysis</title>
+    <link rel="icon" type="image/x-icon" href="https://img.freepik.com/premium-vector/sperm-icon-logo-vector-illustration-design-template_598213-1761.jpg">
+     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="dark">
+  <ul>
+        <li><a class="active" href="{{url_for('home')}}">Home</a></li>
+        <li><a href="{{url_for('sperm')}}">Sperm Detection Tool</a></li>
+        <li><a  href="{{url_for('about')}}">About</a></li>
+    </ul>
+    <header>
+        <h1>SPERM DNA FRAGMENTATION</h1>
+        <h2>Detection of good sperm using Deep Learing Algorirthm</h2>
+    </header>
+    <h5>TO USE THE TOOL----->CLICK THE SPERM DETECTION TOOL BUTTON</h5>
+    <section id="Introduction">
+    <h3>Introduction to Sperm DNA Fragmentation</h3>
+    <p>1.Sperm DNA fragmentation refers to the presence of breaks or irregularities in the DNA strands within sperm cells.</p>
+    <p>2.This condition is an important factor in male infertility and has significant implications for reproductive health.</p>
+    <p>3.The integrity of sperm DNA is crucial for the successful fertilization of an egg and the subsequent development of a healthy embryo.</p>
+    <p> 4.Fragmentation can result from various factors, including oxidative stress, infections, lifestyle factors, and certain medical treatments. </p>
+    <p>5.levated levels of sperm DNA fragmentation can compromise sperm quality, reduce fertility potential, and increase the risk of miscarriage and genetic abnormalities in offspring.</p>
+    <p>6.Understanding the causes, mechanisms, and implications of sperm DNA fragmentation is essential for developing effective diagnostic and therapeutic strategies to improve male reproductive outcomes.</p>
+    </section>
+    <section id="ai">
+        <h3>AI Based Sperm Detection</h3>
+    <p>1.In recent years, advancements in artificial intelligence (AI) and machine learning have revolutionized various fields of science and medicine. One such area where AI holds significant potential is in the realm of reproductive health. The assessment of sperm quality is a crucial factor in understanding male fertility, and traditional methods for sperm detection and DNA fragmentation analysis can be time-consuming, labor-intensive, and subject to human error. </p>
+    <p>2.AI-based sperm detection and DNA fragmentation offer a novel approach to enhancing accuracy, efficiency, and consistency in fertility diagnostics. By leveraging sophisticated algorithms and computer vision techniques, AI can analyze sperm samples with remarkable precision, identifying and quantifying sperm cells, and assessing DNA integrity more effectively than conventional methods.</p>
+    <p>3.This project aims to develop an AI-based system that can automatically detect sperm cells and evaluate DNA fragmentation, providing a reliable and rapid tool for fertility assessment. The integration of AI in this context not only streamlines the diagnostic process but also opens new possibilities for personalized treatment plans and improved outcomes in assisted reproductive technologies.</p>   
+    </section>
+    <section id="how">
+        <h3>Implementation of Sperm Detection Using AI Algorithms</h3>
+        <p>1.Define Objectives: Establish clear goals for the sperm detection project.</p>
+        <p>2.Gather Dataset: Collect a diverse dataset of sperm images.</p>
+        <p>3.Annotate Dataset: Label images to indicate sperm presence and characteristics.</p>
+        <p>4.Preprocess Data: Apply transformations and split the dataset into training, validation, and test sets.</p>
+        <p>5.Choose CNN Architecture: Select an appropriate CNN model (e.g., ResNet)</p>
+        <p>6.Validate Model: Evaluate model performance using the validation set and refine as necessary.</p>
+        <p>7.Test Model: Assess final model performance on the test dataset.</p>
+        <p>8.Set Up Server: Establish a server to handle image uploads and model inference.</p>
+        <p>9.Integrate Model: Integrate the trained model into the backend server.</p>
+    </section>
+<footer>
+        <p id="foot">&copy; Sperm Detection Tool</p>
+    </footer>
+</body>
+</html>

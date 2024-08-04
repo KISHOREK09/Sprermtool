@@ -1,0 +1,274 @@
+/* Navigation Bar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+li {
+    float: left;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+li a {
+    display: block;
+    color: ghostwhite;
+    text-align: center;
+    padding: 14px 17px;
+    text-decoration: none;
+}
+
+.active {
+    background-color: #4caf8b;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #4c9daf;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.title {
+    text-align: center;
+    color: #4cafac;
+    border: 2px solid #4c95af;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background for contrast */
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Form Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    padding: 20px;
+}
+
+form#loginForm {
+    border: 2px solid #4c95af;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background for contrast */
+}
+
+/* Form Elements */
+form#loginForm label {
+    color: #fff;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #e60073;
+    }
+
+    to {
+        text-shadow: 0 0 20px #ff4da6, 0 0 30px #ff4da6;
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #e60073;
+    }
+
+    to {
+        text-shadow: 0 0 20px #ff4da6, 0 0 30px #ff4da6;
+    }
+}
+
+form#loginForm input[type="text"] {
+    width: 85%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center; /* Center align text in the input */
+}
+
+form#loginForm button[type="submit"] {
+    width: 40%;
+    padding: 7px;
+    background-color: #4ca5af;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form#loginForm button[type="submit"]:hover {
+    background-color: #4cafa5;
+}
+
+/* Loader Styles */
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    border: 6px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 6px solid #3498db;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.blur {
+    filter: blur(5px);
+    pointer-events: none; /* Prevent interactions with blurred content */
+}
+
+/* Message and Image Upload Styles */
+#message {
+    display: none;
+    text-align: center;
+    margin-top: 20px;
+    border: 2px solid #4c95af;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background for contrast */
+}
+
+#message p {
+    color: #fff;
+    font-size: 1.2em;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+#message form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#message input[type="file"] {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #4cafa5;
+}
+
+#message button[type="submit"] {
+    padding: 7px 20px;
+    background-color: #4ca5af;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#message button[type="submit"]:hover {
+    background-color: #4cafa5;
+}
+
+/* Result Section */
+.result {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background for contrast */
+    color: #fff;
+}
+
+.result img {
+    max-width: 100%;
+    border: 2px solid #4c95af;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.result a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4ca5af;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.result a:hover {
+    background-color: #4cafa5;
+}
+
+.result button {
+    padding: 7px 20px;
+    background-color: #4ca5af;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.result button:hover {
+    background-color: #4cafa5;
+}
+
+/* Alert Styles */
+.alert {
+    text-align: center;
+    color: #fff;
+    font-size: 1.2em;
+    animation: glow 1s ease-in-out infinite alternate;
+}

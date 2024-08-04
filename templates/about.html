@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/x-icon" href="https://img.freepik.com/premium-vector/sperm-icon-logo-vector-illustration-design-template_598213-1761.jpg">
+</head>
+<body class="dark">
+    <ul>
+        <li><a  href="{{url_for('home')}}">Home</a></li>
+        <li><a  href="{{url_for('sperm')}}">Sperm Detection Tool</a></li>
+        <li><a class="active" href="{{url_for('about')}}">About</a></li>
+        </ul>
+</body>

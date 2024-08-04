@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sperm Detection Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+    <link rel="icon" type="image/x-icon" href="https://img.freepik.com/premium-vector/sperm-icon-logo-vector-illustration-design-template_598213-1761.jpg">
+</head>
+<body class="dark">
+    <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a class="active" href="{{ url_for('sperm') }}">Sperm Detection Tool</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+    </ul>
+    <div class="video-background">
+        <video autoplay muted loop id="background-video" poster="{{ url_for('static', filename='fallback.jpg') }}">
+            <source src="{{ url_for('static', filename='output.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div class="title">
+        <h3>Sperm Detection Tool</h3>
+        <p id="step1-text">1. Enter your Name to Activate the Tool</p>
+        <p id="step2-text" style="display:none;">2. Upload the image by clicking the submit button</p> 
+    </div>
+    <div class="container">
+        <div id="step1">
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <label for="username">Enter Your Name:</label>
+                <input type="text" id="username" name="username" required>
+                <div class="button-container">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div id="step2" style="display:none;">
+            <div id="message">
+                <p id="greeting"></p>
+                <form id="imageForm" action="{{ url_for('sperm') }}" method="post" enctype="multipart/form-data" onsubmit="showLoader(event)">
+                    <input type="file" id="file" name="file" accept="image/*" required>
+                    <button type="submit">Upload Image</button>
+                </form>
+            </div>
+        </div>
+        <div id="loader-wrapper" class="loader-wrapper" style="display: none;">
+            <div class="loader"></div>
+        </div>
+        {% if m %}
+        <div class="alert">{{ m }}</div>
+        <div class="result" id="resultSection" style="display: block;">
+            {% if image_url %}
+            <img src="{{ image_url }}" alt="Processed Image">
+            <a id="Download1" href="{{ url_for('download_file', filename=image_url.split('/')[-1]) }}">Download Processed Image</a>
+            {% endif %}
+            <button onclick="resetForm()">Test Again</button>
+        </div>
+        {% endif %}
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
